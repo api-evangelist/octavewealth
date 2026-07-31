@@ -1,7 +1,26 @@
 aid: octavewealth
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/octavewealth.png
 name: Octavewealth
-description: Octavewealth is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Octave Wealth (octavewealth.com) is a Y Combinator-backed company that, based on
+  its name and branding, operates in the wealth and personal-finance space. It was
+  surfaced as a portfolio company of Y Combinator and added to the API Evangelist
+  network for enrichment. As of this enrichment pass the company's public web
+  presence sits behind Cloudflare and exposes no public developer API, documentation,
+  OpenAPI specification, or SDK surface; the only machine-discoverable artifact found
+  was a published RFC 9116 security.txt with a security contact. This profile records
+  that verifiable state rather than a developer program.
 url: https://raw.githubusercontent.com/api-evangelist/octavewealth/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +30,35 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Wealth Management
+- Personal Finance
+- Fintech
+- Y Combinator
+- Investing
 apis: []
+common:
+- type: VulnerabilityDisclosure
+  url: security/octavewealth-vulnerability-disclosure.yml
+- type: Security
+  url: well-known/octavewealth-security.txt
+- type: DomainSecurity
+  url: security/octavewealth-domain-security.yml
+- type: Website
+  url: https://octavewealth.com
+- type: SecurityTxt
+  url: well-known/octavewealth-security.txt
+- type: WellKnown
+  url: well-known/octavewealth-well-known.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

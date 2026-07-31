@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://octavewealth.com/.well-known/
+host: https://octavewealth.com
+documents:
+  - path: /.well-known/security.txt          # RFC 9116
+    status: 200
+    file: octavewealth-security.txt
+  - path: /.well-known/openid-configuration   # OIDC discovery
+    status: 404
+  - path: /.well-known/oauth-authorization-server  # RFC 8414
+    status: 404
+  - path: /.well-known/api-catalog             # RFC 9727
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+notes: >-
+  octavewealth.com sits behind Cloudflare and returns a JS challenge (403/challenge)
+  to non-interactive clients for HTML pages, but /.well-known/security.txt is served
+  directly (HTTP 200). No API, docs, or developer subdomains resolve
+  (api./docs./developer.octavewealth.com all NXDOMAIN).
